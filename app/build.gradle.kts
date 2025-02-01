@@ -16,7 +16,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
     }
 
     buildTypes {
@@ -51,6 +50,9 @@ android {
 dependencies {
     implementation("androidx.wear.compose:compose-material:1.2.0")
     implementation("androidx.wear.compose:compose-foundation:1.2.0")
+    implementation("androidx.compose.ui:ui:1.4.3") // Required for Canvas and basic UI components
+    implementation("androidx.compose.foundation:foundation:1.4.3") // For Canvas
+    implementation("androidx.compose.material3:material3:1.1.2")
 
     // Add this dependency for WearDevices
     implementation("androidx.wear.compose:compose-ui-tooling:1.4.0")
@@ -73,9 +75,6 @@ dependencies {
 
     // Navigation (if you plan to navigate between screens)
     implementation("androidx.navigation:navigation-compose:2.7.5")
-
-    // Material 3 (if you prefer using Material Design 3 components)
-    implementation("androidx.compose.material3:material3:1.1.2")
 
     // Unit Testing (if needed)
     testImplementation("junit:junit:4.13.2")
